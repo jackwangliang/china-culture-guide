@@ -24,7 +24,7 @@ Paths and flags change between releases; verify against the agent's own document
 | Item | Note |
 |---|---|
 | Skill location | `$CODEX_HOME/skills/china-culture-guide/` (default `$CODEX_HOME` is `~/.codex`). Some versions and installers also read `.agents/skills/` (project) or `~/.agents/skills/` (personal). **Check `/skills` inside Codex** — that list is authoritative, and identically named skills are not merged. |
-| Install | `git clone <repo> "$CODEX_HOME/skills/china-culture-guide"`, or `$skill-installer <owner>/<repo>/china-culture-guide`. Explicit invocation uses `$china-culture-guide`. |
+| Install | `git clone https://github.com/jackwangliang/china-culture-guide.git "$CODEX_HOME/skills/china-culture-guide"`, or `$skill-installer jackwangliang/china-culture-guide`. Explicit invocation uses `$china-culture-guide`. |
 | Live search | `web_search` in `~/.codex/config.toml` accepts `cached` (**default** — an OpenAI-maintained index, no live fetch), `live`, `indexed` (newer builds) and `disabled`. Set `web_search = "live"` or start a session with `codex --search`. |
 | Sandbox | Shell network is off by default in read-only and workspace-write sandboxes. `sandbox_workspace_write.network_access = true` may be needed for fetches outside the built-in search tool. |
 | Enterprise override | A `requirements.toml` can restrict allowed web-search modes regardless of user config. If `--search` has no effect, check this. |

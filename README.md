@@ -93,23 +93,29 @@ The open Agent Skills specification marks `allowed-tools` **experimental**, with
 
 ## Install
 
-The repository root **is** the skill folder. Clone it into your agent's skills directory:
+The repository root **is** the skill folder. One-line install in any Agent Skills client:
+
+```bash
+npx skills add jackwangliang/china-culture-guide
+```
+
+Or clone it directly into your agent's skills directory:
 
 ```bash
 # Codex CLI
-git clone https://github.com/<YOUR-USERNAME>/china-culture-guide.git "$HOME/.codex/skills/china-culture-guide"
+git clone https://github.com/jackwangliang/china-culture-guide.git "$HOME/.codex/skills/china-culture-guide"
 
 # OpenClaw
-git clone https://github.com/<YOUR-USERNAME>/china-culture-guide.git "$HOME/.openclaw/skills/china-culture-guide"
+git clone https://github.com/jackwangliang/china-culture-guide.git "$HOME/.openclaw/skills/china-culture-guide"
 
 # Claude Code
-git clone https://github.com/<YOUR-USERNAME>/china-culture-guide.git "$HOME/.claude/skills/china-culture-guide"
+git clone https://github.com/jackwangliang/china-culture-guide.git "$HOME/.claude/skills/china-culture-guide"
 
 # WorkBuddy
-git clone https://github.com/<YOUR-USERNAME>/china-culture-guide.git "$HOME/.workbuddy/skills/china-culture-guide"
+git clone https://github.com/jackwangliang/china-culture-guide.git "$HOME/.workbuddy/skills/china-culture-guide"
 ```
 
-Codex users can also run `$skill-installer <owner>/<repo>/china-culture-guide`; OpenClaw users can install from or publish to ClawHub. Manually: copy the folder, or paste `SKILL.md` and `references/` into a conversation. Skill paths and flags change between releases — confirm with the agent's own `/skills` list or documentation.
+Codex users can also run `$skill-installer jackwangliang/china-culture-guide`; OpenClaw users can install from or publish to ClawHub. Manually: copy the folder, or paste `SKILL.md` and `references/` into a conversation. Skill paths and flags change between releases — confirm with the agent's own `/skills` list or documentation.
 
 **After installing, verify the gate once**: ask a genesis question with search on (a passing answer names sources and dates), then **disable search in the client's configuration**, start a fresh session and ask the same question (a passing answer uses the NO-SEARCH CONTRACT, with no dates or lens sections). Simply asking for an offline answer while the tools are still enabled is a simulation, not a valid negative test. The four-step check is in `references/11-platform-setup.md`. Installing the skill is not the same as enabling live search.
 
@@ -143,6 +149,25 @@ By default answers appear in chat. If you ask for a file, the skill can also del
 - "Which stock should I buy?" / "Is this visa rule still current?"
 
 Cultural examples: [`examples/culture-decoding-examples.md`](examples/culture-decoding-examples.md) (six examples, including the no-search gate and the out-of-scope one). Operational examples: [`examples/sample-conversations.md`](examples/sample-conversations.md).
+
+## A worked example
+
+**You ask, in English, with live search enabled:**
+
+> "Is stir-frying based on 五行相生? I read that somewhere."
+
+**What comes back** — a premise check, not a recipe (abridged from `examples/culture-decoding-examples.md`):
+
+> The association is a natural one — 五行 does supply the vocabulary of 五味 and 三材 that classical cooking texts use. The more precise formulation in those texts, though, is **水火相济 / 既济**: water and fire are opposites, and the vessel (鼎/镬) mediates between them. The *Yijing* says "水在火上，既济"; *Huainanzi* says "水火相憎，镬在其间，五味以和". 五行相生 is a later, looser way people sometimes describe this. So: yes to the intuition that cooking sits inside a correlative world-view, no to treating it as the direct technical cause.
+
+It then answers the question you actually had — what *did* make stir-frying possible (a thin iron pan, affordable plant oil, sustained heat) — separates the 6th-century first record from Song-era spread, labels the popularisation date as debated, and closes with:
+
+- **Chinese keywords**: `既济 水火相济` · `五行 五味 三材`
+- **One next action** you can take in the next 15 minutes
+
+If live search is unavailable, the skill does **not** produce this essay. It returns the NO-SEARCH CONTRACT instead: the term with pinyin and a literal gloss, a checklist written as questions, 2–3 Chinese search keywords and one next action — no dates, quotations or unverified history.
+
+Full worked cases: [`examples/culture-decoding-examples.md`](examples/culture-decoding-examples.md) and [`references/cases/stir-fry.md`](references/cases/stir-fry.md).
 
 ---
 
