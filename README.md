@@ -6,6 +6,22 @@ This is not a wiki, a course or a travel blog. It is an [Agent Skill](https://gi
 
 简体中文说明：面向海外用户的开源 AI Skill（知识包），介绍中国历史文化与风土人情、从零学中文、交朋友、加入 QQ 群、用微信「搜一搜」找公众号文章、按兴趣关注博主。内容主体为英文，中文词句均附拼音与英文解释；项目刻意不涉及政治与军事话题。**文化类问题强制要求联网检索能力**，已适配 Codex CLI、OpenClaw、Claude Code、WorkBuddy 等支持 `SKILL.md` 的智能体。
 
+## See it in action
+
+A real run (full report: [practice-culture-guide.md](https://github.com/jackwangliang/china-agent-skills-practice/blob/main/practice-culture-guide.md)). A learner asks:
+
+> "Is stir-frying based on 五行相生? I read that somewhere."
+
+Excerpt from the answer (the skill answers in the reader's language, with the Chinese words supplied):
+
+- **One-sentence answer:** 炒 (chǎo, "stir-fry") is a high-heat technique that tosses food in oil in a very hot wok. Classical writing frames the mechanism as 水火相济 ("water and fire working together"). Treating 五行相生 ("mutual generation of the five phases") as the *cause* of stir-frying is a later conflation, not an evidenced causal chain.
+- **Premise check:** the five phases genuinely supplied classical cooking vocabulary (五味, 三材). But the 相生 material found online is mostly about wood-fired stove construction (木火土金水) — about the stove, not the origin of the technique. No academic source was found treating it as the technical cause, so the skill declines to assert one.
+- **Evidence discipline:** a Northern Wei 《齐民要术》 "炒鸡子法" reference is B-tier retelling; the original text was not verified, so **no date is stated** ("there is a written record" ≠ "in everyday use"). C-tier aggregator claims are labelled and not quoted as fact.
+- **A bridge to the reader:** tools usually come first and the explanations grow afterwards — like non-stick pans and induction hobs changing home cooking before the "why it's better" stories appeared.
+- **Next action (15 min):** check the original text of 《齐民要术》「炒鸡子法」 and the 既济 hexagram in an open text archive, then judge whether 水火相济 was actually used to explain stir-frying.
+
+Search keywords given: `既济 水火相济` · `齐民要术 炒鸡子法` · `炒菜 铁锅 植物油 宋代`. Deliberately no politics or military topics. If live retrieval fails, the skill refuses to write the cultural answer and returns a NO-SEARCH checklist instead.
+
 ---
 
 ## The architecture (read this first)
