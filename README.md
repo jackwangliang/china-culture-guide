@@ -264,6 +264,32 @@ Worked-case sources are listed with evidence grades inside each case. [`referenc
 
 Platform setup notes in `references/11-platform-setup.md` describe configuration defaults sourced from the Agent Skills specification and each client's published documentation. Paths and flags change between releases; verify with the client itself.
 
+## Frequently asked questions
+
+**I know zero Chinese. Can I actually use this, or do I need to read Chinese?**
+It assumes you have zero Chinese reading ability, no Chinese phone number, no bank card and no local contacts. Every operational guide is written in English step-by-step, gives you paste-ready Chinese phrases, and tells you exactly what to do next — for example, a four-week plan if you have 20 minutes a day.
+
+**How do I start learning Chinese from scratch as a foreigner?**
+Ask for a concrete routine rather than general advice. The skill turns "I want to learn Chinese" into a daily, week-by-week plan with specific actions and phrases you can send to a language partner. Operational, step-by-step tasks work fully offline.
+
+**How do I make Chinese friends or find a language exchange partner?**
+It teaches search, not fakery: how to find and join QQ groups for language exchange, how to use WeChat Search to locate accounts and articles on a topic, and how to write a short first message to someone who offered to be your partner. It will not invent usernames, buy accounts or mass-message people.
+
+**Why should I trust its answers about Chinese culture and history?**
+It does not answer cultural questions from memory. It requires a live web-search tool and grades evidence by source quality; without a readable source it gives you the term, a checklist of questions and search keywords rather than a confident but baseless essay. Worked cases cite classical texts, archaeology and institutional scholarship. See [Accuracy and sources](#accuracy-and-sources).
+
+**What kind of cultural questions can I ask?**
+Origins and meaning of customs, objects and ideas — "what is 炒菜 and when did stir-frying begin?", "why did chopsticks replace knives at the table?", "is 老火靓汤 really 2,000 years old?", "why is 火候 such a big idea in Chinese cooking?". It corrects false premises and points to primary sources instead of agreeing with a claim.
+
+**Can it help me set up WeChat, Weixin Pay or QQ as a foreigner?**
+Yes for step-by-step setup and search guidance — official accounts, in-chat 搜一搜, QQ groups, account and payment setup — with fees and UI labels marked as version-dependent so you verify in-app. It links official help centres rather than guessing.
+
+**What is out of scope?**
+Politics, military and geopolitics, live rankings or benchmark verdicts, and definitive visa, legal, tax or medical advice (it links official sources instead). It also refuses rule-bypassing such as bought accounts or unofficial app mirrors. See [Deliberate scope limits](#deliberate-scope-limits).
+
+**Does it cost anything or need an account or API key?**
+No. It is a community-made Markdown guide with no dependencies, no API keys and no build step; the only hard requirement is a working web-search tool for cultural questions. Operational guides work offline.
+
 ## Contributing
 
 Corrections to outdated UI labels, new worked cases, better lenses, better phrases and translations are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) first — especially the rule that **a new question about a new object does not earn a new fact entry**, that the search gate is not negotiable, and that platform-specific manifests do not belong in this repo.
